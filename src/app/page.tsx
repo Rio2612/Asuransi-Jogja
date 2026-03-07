@@ -1,42 +1,57 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="bg-white">
+    <main className="bg-white text-gray-900">
 
-      {/* Header */}
-      <Header />
+      {/* HEADER */}
+      <header className="border-b">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <h1 className="font-bold text-lg">
+            Asuransi Jogja
+          </h1>
+
+          <nav className="flex gap-6 text-sm">
+            <Link href="/">Home</Link>
+            <Link href="/asuransi-motor-vehicle">Motor Vehicle</Link>
+            <Link href="/asuransi-properti">Property</Link>
+            <Link href="/asuransi-engineering">Engineering</Link>
+            <Link href="/surety-bond">Surety Bond</Link>
+          </nav>
+        </div>
+      </header>
 
       {/* HERO */}
-      <section className="bg-gradient-to-r from-blue-700 to-blue-900 text-white py-24">
-        <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+      <section className="bg-blue-900 text-white py-24">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
 
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+            <h2 className="text-4xl font-bold leading-tight">
               Konsultan Asuransi Jogja
-            </h1>
+            </h2>
 
-            <p className="mt-6 text-lg text-blue-100">
-              Solusi perlindungan kendaraan, properti, proyek konstruksi,
-              dan bisnis Anda di Yogyakarta dan seluruh Indonesia.
+            <p className="mt-6 text-blue-100">
+              Solusi perlindungan kendaraan, properti,
+              proyek konstruksi, dan bisnis Anda
+              di Yogyakarta dan seluruh Indonesia.
             </p>
 
             <div className="mt-8 flex gap-4">
+
               <a
                 href="https://wa.me/628123456789"
-                className="bg-white text-blue-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100"
+                className="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold"
               >
                 Konsultasi Gratis
               </a>
 
               <Link
                 href="/produk-asuransi"
-                className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-800"
+                className="border border-white px-6 py-3 rounded-lg"
               >
                 Lihat Produk
               </Link>
+
             </div>
           </div>
 
@@ -44,16 +59,16 @@ export default function HomePage() {
             <img
               src="/hero-insurance.jpg"
               alt="Asuransi Jogja"
-              className="rounded-xl shadow-lg"
+              className="rounded-xl"
             />
           </div>
 
         </div>
       </section>
 
-      {/* TRUST SIGNAL */}
+      {/* TRUST */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6 grid md:grid-cols-4 gap-8 text-center">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-center">
 
           <div>
             <h3 className="text-3xl font-bold text-blue-700">10+</h3>
@@ -78,68 +93,63 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PRODUK ASURANSI */}
+      {/* PRODUK */}
       <section className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
 
           <h2 className="text-3xl font-bold text-center">
-            Produk Asuransi Unggulan
+            Produk Asuransi
           </h2>
-
-          <p className="text-center mt-4 text-gray-600">
-            Pilihan perlindungan lengkap untuk kendaraan, properti,
-            bisnis, dan proyek Anda.
-          </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
 
             <Link
               href="/asuransi-motor-vehicle"
-              className="border rounded-xl p-6 hover:shadow-lg"
+              className="border p-6 rounded-xl hover:shadow"
             >
-              <h3 className="text-xl font-semibold">
+              <h3 className="font-semibold text-lg">
                 Motor Vehicle Insurance
               </h3>
-              <p className="mt-3 text-gray-600">
-                Perlindungan mobil, alat berat, excavator,
-                bulldozer, crane, dan kendaraan operasional.
+              <p className="text-gray-600 mt-2">
+                Perlindungan mobil, alat berat,
+                excavator, bulldozer, dan crane.
               </p>
             </Link>
 
             <Link
               href="/asuransi-properti"
-              className="border rounded-xl p-6 hover:shadow-lg"
+              className="border p-6 rounded-xl hover:shadow"
             >
-              <h3 className="text-xl font-semibold">
+              <h3 className="font-semibold text-lg">
                 Property Insurance
               </h3>
-              <p className="mt-3 text-gray-600">
-                Perlindungan rumah, gedung, gudang,
-                dan aset properti dari risiko kerugian.
+              <p className="text-gray-600 mt-2">
+                Perlindungan rumah, gedung,
+                gudang, dan aset properti.
               </p>
             </Link>
 
             <Link
               href="/asuransi-engineering"
-              className="border rounded-xl p-6 hover:shadow-lg"
+              className="border p-6 rounded-xl hover:shadow"
             >
-              <h3 className="text-xl font-semibold">
+              <h3 className="font-semibold text-lg">
                 Engineering Insurance
               </h3>
-              <p className="mt-3 text-gray-600">
-                Asuransi proyek konstruksi,
-                kontraktor, dan pekerjaan teknik.
+              <p className="text-gray-600 mt-2">
+                Perlindungan proyek konstruksi
+                dan pekerjaan teknik.
               </p>
             </Link>
 
             <Link
               href="/asuransi-liability"
-              className="border rounded-xl p-6 hover:shadow-lg"
+              className="border p-6 rounded-xl hover:shadow"
             >
-              <h3 className="text-xl font-semibold">
+              <h3 className="font-semibold text-lg">
                 Liability Insurance
               </h3>
-              <p className="mt-3 text-gray-600">
+              <p className="text-gray-600 mt-2">
                 Perlindungan tanggung jawab hukum
                 terhadap pihak ketiga.
               </p>
@@ -147,14 +157,14 @@ export default function HomePage() {
 
             <Link
               href="/surety-bond"
-              className="border rounded-xl p-6 hover:shadow-lg"
+              className="border p-6 rounded-xl hover:shadow"
             >
-              <h3 className="text-xl font-semibold">
+              <h3 className="font-semibold text-lg">
                 Surety Bond
               </h3>
-              <p className="mt-3 text-gray-600">
-                Jaminan proyek untuk tender,
-                pelaksanaan, dan pemeliharaan.
+              <p className="text-gray-600 mt-2">
+                Jaminan proyek untuk tender
+                dan pelaksanaan pekerjaan.
               </p>
             </Link>
 
@@ -162,65 +172,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PROBLEM SOLUTION */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16">
-
-          <div>
-            <h2 className="text-3xl font-bold">
-              Masalah yang Sering Terjadi
-            </h2>
-
-            <ul className="mt-6 space-y-4 text-gray-600">
-              <li>❌ Klaim asuransi sulit diproses</li>
-              <li>❌ Agen tidak responsif</li>
-              <li>❌ Produk terlalu banyak dan membingungkan</li>
-              <li>❌ Premi tidak transparan</li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-3xl font-bold">
-              Solusi dari Konsultan Asuransi Jogja
-            </h2>
-
-            <ul className="mt-6 space-y-4 text-gray-600">
-              <li>✅ Konsultasi gratis</li>
-              <li>✅ Pendampingan klaim</li>
-              <li>✅ Pilihan perusahaan terbaik</li>
-              <li>✅ Pelayanan personal</li>
-            </ul>
-          </div>
-
-        </div>
-      </section>
-
       {/* ABOUT */}
-      <section className="py-24">
-        <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
 
           <img
             src="/konsultan-asuransi.jpg"
             alt="Konsultan Asuransi Jogja"
-            className="rounded-xl shadow-lg"
+            className="rounded-xl"
           />
 
           <div>
 
             <h2 className="text-3xl font-bold">
-              Konsultan Asuransi Profesional di Jogja
+              Konsultan Asuransi Profesional
             </h2>
 
             <p className="mt-6 text-gray-600">
-              Kami membantu individu dan perusahaan mendapatkan
-              perlindungan asuransi terbaik dari berbagai perusahaan
-              asuransi terpercaya di Indonesia.
+              Kami membantu individu dan perusahaan
+              mendapatkan perlindungan asuransi terbaik
+              dari berbagai perusahaan asuransi terpercaya.
             </p>
 
             <p className="mt-4 text-gray-600">
               Dengan pengalaman lebih dari 10 tahun,
-              kami menyediakan solusi asuransi kendaraan,
-              properti, proyek konstruksi, dan bisnis.
+              kami melayani asuransi kendaraan,
+              properti, dan proyek konstruksi.
             </p>
 
           </div>
@@ -248,53 +225,44 @@ export default function HomePage() {
 
       </section>
 
-      {/* FAQ */}
-      <section className="py-24">
-        <div className="container mx-auto px-6 max-w-3xl">
+      {/* FOOTER */}
+      <footer className="bg-gray-900 text-gray-300 py-12">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
-          <h2 className="text-3xl font-bold text-center">
-            Pertanyaan yang Sering Diajukan
-          </h2>
+          <div>
+            <h3 className="font-bold text-white">
+              Asuransi Jogja
+            </h3>
+            <p className="mt-3 text-sm">
+              Konsultan asuransi kendaraan,
+              properti, bisnis, dan proyek
+              di Yogyakarta.
+            </p>
+          </div>
 
-          <div className="mt-10 space-y-6">
+          <div>
+            <h3 className="font-bold text-white">
+              Produk
+            </h3>
+            <ul className="mt-3 space-y-2 text-sm">
+              <li><Link href="/asuransi-motor-vehicle">Motor Vehicle</Link></li>
+              <li><Link href="/asuransi-properti">Property</Link></li>
+              <li><Link href="/asuransi-engineering">Engineering</Link></li>
+              <li><Link href="/surety-bond">Surety Bond</Link></li>
+            </ul>
+          </div>
 
-            <div>
-              <h3 className="font-semibold">
-                Berapa biaya asuransi mobil di Jogja?
-              </h3>
-              <p className="text-gray-600">
-                Premi asuransi mobil tergantung jenis kendaraan,
-                nilai kendaraan, dan jenis perlindungan.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold">
-                Apakah konsultasi asuransi gratis?
-              </h3>
-              <p className="text-gray-600">
-                Ya, kami menyediakan konsultasi gratis
-                untuk membantu memilih produk yang tepat.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold">
-                Apakah bisa membantu proses klaim?
-              </h3>
-              <p className="text-gray-600">
-                Kami membantu proses klaim agar lebih cepat
-                dan sesuai dengan ketentuan polis.
-              </p>
-            </div>
-
+          <div>
+            <h3 className="font-bold text-white">
+              Kontak
+            </h3>
+            <p className="mt-3 text-sm">
+              WhatsApp: 0812-3456-789
+            </p>
           </div>
 
         </div>
-      </section>
-
-      {/* Footer */}
-      <Footer />
+      </footer>
 
     </main>
   );
